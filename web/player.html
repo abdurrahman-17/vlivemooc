@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <script src="player.js" async></script>
+</head>
+
+<body>
+    <div
+    class="player-info"
+  >
+    <div >
+
+      <img class="player-close-icon" src="@/assets/icons/less-than-filled-50.png" alt >
+    </div>
+    <div>
+      <p class="content-title"></p>
+    </div>
+  </div>
+  <div class="player-popup">
+    <div class="vlive-player-container" id="vlive-player-container">
+        <div id="vlive-player"></div>
+      </div>
+  </div>
+
+ <!-- Firebase App is always required and must be first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script> -->
+<!-- Add additional services you want to use -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-database.js"></script> -->
+
+<script>
+  window.playerDefaultAccessClear = new CustomEvent('EventPlayerDefaultAccessClear', { detail: 'playlead_ended'});
+  window.playerFullscreenActive = document.createEvent('CustomEvent');
+
+  window.addEventListener("EventPlayerFullscreenActive", function(evt) {
+     window.parent.postMessage({"type": "on_fullscreen_change", "fullscreen": evt.detail.fullsreenActive}, "*");
+    }, false);
+
+  
+  window.addEventListener('EventPlayerDefaultAccessClear', function (payload) {
+    // var videoTag =  document.getElementById('vlive-video-tag');
+    // var position = parseInt(videoTag.position);
+    // writeContinueWatch(position);
+    // console.log("payload detail =>>>>>> }", payload.detail);
+      window.parent.postMessage({"type": "playlead_ended"}, "*");
+    });
+
+  // var config = {    
+  //         databaseURL: "https://enrichtv-b0346-default-rtdb.firebaseio.com",
+  
+
+  //         apiKey: 'AIzaSyB_Ph1FBymn1uAjucmf_rI9_GPNXegcxcw',
+  // appId: '1:503797194398:web:9b1ca164c4f710d984a58f',
+  // messagingSenderId: '503797194398',
+  // projectId: 'enrichtv-b0346',
+  // authDomain: 'enrichtv-b0346.firebaseapp.com',
+  // storageBucket: 'enrichtv-b0346.appspot.com',
+  // measurementId: 'G-C1JPHJWE7V',
+
+
+  // };
+  // const firebaseApp = firebase.initializeApp(config);
+  // var database = firebaseApp.database();
+  // console.log("firebase initialization complete");
+  //subscriberid // profileid // content // 
+  function writeContinueWatch(position) {
+
+     window.parent.postMessage({"type": "continue_watch", "position": position}, "*");
+
+     
+
+  //   const urlParams = new URLSearchParams(location.search);
+  //   const data = JSON.parse(urlParams.get('data'));
+  //   const subscriberid = data['subscriberid'];
+  //   const profileid = data['profileid'];
+  //   const objectid = data['contentId'];
+  //   const seriesid = data['seriesid'];
+
+  //   var payload = {
+  //       "category": data['category'],
+  //       "contentStatus": "ACTIVE",
+  //       "displayLanguage": "eng",
+  //       "duration": data['duration'],
+  //       "episodes": {},
+  //       "genre": data['genre'],
+  //       "likestatus": "NONE",
+  //       "objectid": objectid,
+  //       "objecttype": data['contenttype'],
+  //       "poster": data['poster'],
+  //       "status": "ACTIVE",
+  //       "title": data['title'],
+  //       "updatedAt": parseInt(Date.now()/1000),
+  //       "watchedDuration": position
+  // }
+
+  //   if(seriesid === "" || seriesid === undefined){
+  //   var ref = `/EnrichTv/subscriber/${subscriberid}/${profileid}/content/${objectid}`;
+  //   }
+  //   else {
+  //     var ref = `/EnrichTv/subscriber/${subscriberid}/${profileid}/content/${seriesid}/episodes/${objectid}`;
+  //     payload.episodenum = data['episodenum'];
+  //     payload.seasonnum = data['seasonnum'];
+  //     payload.seriesid = seriesid;
+  //   }
+
+
+  //   firebase.database().ref(ref).set(payload);
+  // console.log('data written to database');
+}
+
+
+    window.addEventListener("load", function () {
+      // document.getElementById("player-cancel-button").addEventListener("click", function () {
+      //   window.parent.postMessage({"type": "close"}, "*");
+      //   console.log("this works");
+      // });
+
+      const urlParams = new URLSearchParams(location.search);
+      const data = JSON.parse(urlParams.get('data'));
+
+      let position = parseInt(data['position']);
+      let tokenApiURL = data['tokenApiURL'];
+      data['position'] = position;
+
+      let should_render_cancel = false;
+      try{
+        should_render_cancel = data['should_render_cancel'];
+      }
+      catch(error){
+        //do nothing
+      }
+
+      let leadTime = parseInt(data['leadTime']);
+    
+        let config = {
+            platform: "vliveweb",
+            skipTime: 10,
+            progressColor: "#FF9F0A",
+            // tokenApiURL: this.appConfig.providerDetails.drmTokenUrl,
+            orientation: "ltr",
+            userEmail: data['userEmail'],
+            renderSecurity: data['renderSecurity'],
+            should_render_cancel: should_render_cancel,
+            tokenApiURL: tokenApiURL,
+
+        };
+
+        if(leadTime != 0){
+          config['leadTime'] = leadTime;
+        }
+        // console.log("config  is ", config);
+
+        
+        let playerSettings = {
+            container: "vlive-player",
+            showSettings: true,
+            showCast: false,
+            showPlaylist: true,
+            hasWatermark: data['renderLogo'],
+            watermark: 'https://static-templates.web.app/img/ultrawhite.png',
+            captionLang: "en",
+            audioLang: "tr",
+            displayLang: 'en',
+            fairplayCertificate: "/static/noorplayfairplay.cer",
+            playerConfig: config,
+        };
+
+        playerSettings.localeStrings = {
+            qualityTitle: "QUALITY",
+            audioTitle: "AUDIO",
+            subtitleTitle: "SUBTITLES",
+            offText: "Off",
+            autoText: "Auto",
+            skipIntro: "SKIP INTRO",
+            nextEpisodeTimerText: "Next Episode starts after %@",
+            nextTrackTimerText: "Next Track starts after %@",
+            nextEpisode: "NEXT EPISODE",
+            nextTrack: "NEXT TRACK",
+            normal: "Normal",
+            PlaybackSpeed: "PLAYBACK SPEED"
+        };
+
+        window.playerObject = new vLiveWebPlayer.vLivePlayer(playerSettings, []);
+
+        let playlist = [];
+
+         playlist = new vLiveWebPlayer.vLivePlaylistItem(data);
+
+
+        window.playerObject.loadPlaylist([playlist], 0);
+
+        var videoTag =  document.getElementById('vlive-video-tag');
+        // window.playerObject.blowUpPlayer();
+
+       videoTag.addEventListener('pause', (data) => {
+        // console.log("video paused", videoTag.currentTime);
+        writeContinueWatch(parseInt(videoTag.currentTime));
+      });
+
+      videoTag.addEventListener('loadstart', (data) => {
+        // console.log("video started", videoTag.currentTime);
+        writeContinueWatch(parseInt(videoTag.currentTime));
+      
+      });
+      
+      
+    debounce = true,
+    seconds  = 30; // set to 15 instead
+
+videoTag.addEventListener('timeupdate', function(event){
+    var hasPlayedTime = videoTag.currentTime;
+    var intPlayedTime = parseInt(hasPlayedTime, 10);
+    var isFifteen     = intPlayedTime % seconds === 0 && intPlayedTime !== 0;
+    
+    if (isFifteen && debounce) {
+        debounce = false;
+         writeContinueWatch(parseInt(videoTag.currentTime));
+    } else {
+        setTimeout(function() {
+            debounce = true;
+        }, 1000);
+    }
+});
+
+
+        window.playerObject.loadContent(0).then(() => {
+          // console.log("load content called");
+            window.playerObject.play().then(() => {
+        
+            });
+        });
+
+    
+
+
+    // window.playerObject.registerEvent('ready', () => {
+    //     console.log('Received READY')
+    // })
+
+    // window.playerObject.registerEvent('playerready', () => {
+    //     console.log('Received PLAYER READY')
+    // })
+
+    // window.playerObject.registerEvent('loadstart', (data) => {
+    //     console.log(data)
+    // })
+
+    // window.playerObject.registerEvent('unloadstart', () => {
+    //     console.log('Received UNLOAD START')
+    // })
+
+    // window.playerObject.registerEvent('contentplay', (data) => {
+    //     console.log(data)
+    // })
+
+    window.playerObject.registerEvent('contentpause', (data) => {
+        // console.log(data);
+        // console.log("fired pause");
+        // writeContinueWatch(data);
+    })
+
+    // window.playerObject.registerEvent('contentrewind', (data) => {
+    //     console.log(data)
+    // })
+
+    // window.playerObject.registerEvent('contentforward', (data) => {
+    //     console.log(data)
+    // })
+
+    // window.playerObject.registerEvent('contentended', (data) => {
+    //     console.log('Content ended')
+    //     window.playerObject.setPlaybackPosition(0)
+    // })
+
+    // window.playerObject.registerEvent('contentloaded', (data) => {
+    //     console.log(data);
+    //     writeContinueWatch(data);
+    // })
+
+    // window.playerObject.registerEvent('contentprogress', (data) => {
+    //   console.log("on content progress");
+    //   console.log(data);
+    // })
+
+    // window.playerObject.registerEvent('contentseeking', (data) => {
+    //     console.log(data)
+    // })
+
+    // window.playerObject.registerEvent('contentseeked', (data) => {
+    //   console.log("on content seeked");
+    //     console.log(data)
+    // })
+
+    // window.playerObject.registerEvent('playlistended', () => {
+    //     console.log('Received PLAYLIST ENDED')
+    // })
+
+    // window.playerObject.registerEvent('error', (event) => {
+    //     console.log('Received ERROR')
+    //     console.log(event)
+    // })
+
+
+})
+</script>
+
+</body>
+
+
+
+<style>
+    :root {
+    --clr-seek-bar: #E81C25;
+  }
+
+.player-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 8888;
+  }
+  .rtl_align {
+      right: 0;
+      left: auto;
+      width: 50%;
+    }
+  .player-info {
+      display: flex;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+ 
+    }
+    .player-close-icon {
+        cursor: pointer;
+      }
+      .rtl_player_close_icon {
+        width: 25px;
+        margin: 10px 15px;
+        cursor: pointer;
+      }
+      .content-title {
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 50px;
+      }
+
+  @media only screen and (max-width: 576px) {
+  
+    .player-close-icon {
+          width: 25px;
+          margin: 10px;
+          cursor: pointer;
+        }
+        .rtl_player_close_icon {
+          width: 15px;
+          margin: 10px 15px;
+          cursor: pointer;
+        }
+        .content-title {
+          font-size: 14px;
+          margin: 10px 0;
+          line-height: 25px;
+        }
+  }
+</style>
+<!--
+  {
+            "contentId": "okdFUF1Ha41A",
+            "contenttype": "MOVIE",
+            "title": "Technology Changing Modern communication",
+            "description": "Does technology affect communication? Dr. Ratanjit Sondhe believes we have disconnected and are striving to reconnect, but technology will drive us to realize truth and oneness.",
+            "thumbnail": "https://d197x60o2neqwi.cloudfront.net/POSTER/bnto7snnfys_LANDSCAPE_THUMBNAIL.jpg",
+            "source": [
+                "https://d197x60o2neqwi.cloudfront.net/SK9HEDO4_123lDLRyGsrgGo3WWgV_clr.mpd"
+            ],
+            "licenseServer": "https://vdrm.mobiotics.com/prod/proxy/v1/license",
+            "packageid": "123lDLRyGsrgGo3W",
+            "providerid": "enrichtv",
+            "drmscheme": "NONE",
+            "availabilityid": "QQVWEU2W",
+            "providerSession": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJzY3JpYmVyaWQiOiJsWHdEYm1JMDVlbFYiLCJzdWJzY3JpYmVybmFtZSI6IlN1YnJhbWFueWFtIiwiZW1haWwiOiJ2cnN1YnJhbWFueWFtKzFAZ21haWwuY29tIiwicHJvZmlsZWlkIjoibFh3RGJtSTA1ZWxWIiwia2lkc21vZGUiOiJOTyIsImhvbWVjb3VudHJ5IjoiSU4iLCJ2aXNpdGluZ2NvdW50cnkiOiJJTiIsImRldmljZWlkaGFzaCI6IjAxOWU1YmM2NTlmNTI2YjVjNGEyM2Q5ZDAxNWM4M2YyYzljOGE2ZDEiLCJkZXZpY2VpZCI6IjU0NTQ2MTg5NzM2NDQyNjUiLCJkZXZpY2V0eXBlIjoiUEMiLCJkZXZpY2VvcyI6Ik1BQ09TIiwiYXBwdmVyc2lvbiI6IjQ2LjQuMCIsImlwIjoiMTMwLjE3Ni41NC43NSIsIkdlb0xvY0lwIjoiNDcuMTEuNDcuMTUzIiwiaXNzdWVyIjoiZW5yaWNodHYiLCJleHBpcmVzSW4iOjM2MDAsInByb3ZpZGVybmFtZSI6IkVOUklDSFRWIiwiaWF0IjoxNjg1NTEwMjIyLCJleHAiOjE2ODU1MTM4MjIsImlzcyI6ImVucmljaHR2In0.4Q4XdHIexNSCgT5xpjOEg8EXkPaNHVQ3BmNtzkQrkSc",
+            "skip": "",
+            "position": 1,
+            "contentTags": ['ct-music'],
+            "scrubbing": {
+                "total": "130",
+                "column": "100",
+                "row": "2",
+                "interval": "10",
+                "filename": "SK9HEDO4_SCRUBBING_130_100_2_160x90_10_100x2_output.jpeg",
+                "seekThumbnailImagePath": "SK9HEDO4_SCRUBBING_130_100_2_160x90_10_100x2_output.jpeg",
+                "width": "160",
+                "height": "90"
+            },
+            "adversity": {
+                "advisory": null,
+                "pgrating": "ALL",
+                "defaultgenre": "BUSINESS"
+            },
+            "isDrmContent": false
+        }
+-->
+</html>
+
+

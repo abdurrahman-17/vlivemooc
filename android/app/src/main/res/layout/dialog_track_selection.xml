@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/c_p_track_selection_dialog_background_1">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonClose"
+        style="@style/AppTheme.Widget.ImageView.CenterCrop.DialogClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/layout_margin_5dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/layout_padding_15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_dialog_close" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/layout_size_45dp"
+        android:layout_marginBottom="@dimen/layout_margin_10dp">
+
+
+        <LinearLayout
+            android:id="@+id/qualityContainer"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/audioContainer"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelQuality"
+                style="@style/AppTheme.TextHeader2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.21"
+                android:text="@string/quality" />
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/layout_margin_10dp"
+                android:fillViewport="true"
+                android:paddingStart="@dimen/layout_padding_7dp"
+                android:paddingEnd="@dimen/layout_padding_7dp"
+                android:paddingBottom="@dimen/layout_padding_20dp"
+                android:scrollbars="none">
+
+
+                <com.enrichtv.android.player.ui.player.exo.TrackSelectionView
+                    android:id="@+id/qualityTrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_10dp"
+                    app:layout="@layout/mob_track_item_single_choice" />
+            </ScrollView>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/audioDivider"
+            style="@style/AppTheme.DivideVertical.Dialog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/audioContainer"
+            app:layout_constraintStart_toEndOf="@id/qualityContainer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/audioContainer"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/subTitleContainer"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/qualityContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelLanguage"
+                style="@style/AppTheme.TextHeader2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/audio" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_margin_10dp"
+                android:fillViewport="true"
+                android:paddingStart="@dimen/layout_padding_7dp"
+                android:paddingEnd="@dimen/layout_padding_7dp"
+                android:paddingBottom="@dimen/layout_padding_20dp"
+                android:scrollbars="none">
+
+
+                <com.enrichtv.android.player.ui.player.exo.TrackSelectionView
+                    android:id="@+id/audioTrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_10dp"
+                    app:layout="@layout/mob_track_item_single_choice" />
+            </ScrollView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/textDivider"
+            style="@style/AppTheme.DivideVertical.Dialog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/subTitleContainer"
+            app:layout_constraintStart_toEndOf="@id/audioContainer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/subTitleContainer"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/audioContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelSubTitle"
+                style="@style/AppTheme.TextHeader2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/subtitles" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/layout_margin_10dp"
+                android:fillViewport="true"
+                android:paddingStart="@dimen/layout_padding_7dp"
+                android:paddingEnd="@dimen/layout_padding_7dp"
+                android:paddingBottom="@dimen/layout_padding_20dp"
+                android:scrollbars="none">
+
+                <com.enrichtv.android.player.ui.player.exo.TrackSelectionView
+                    android:id="@+id/subTitleTrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_10dp"
+                    app:layout="@layout/mob_track_item_single_choice" />
+            </ScrollView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

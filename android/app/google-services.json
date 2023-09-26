@@ -1,0 +1,79 @@
+{
+  "project_info": {
+    "project_number": "503797194398",
+    "firebase_url": "https://enrichtv-b0346-default-rtdb.firebaseio.com",
+    "project_id": "enrichtv-b0346",
+    "storage_bucket": "enrichtv-b0346.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503797194398:android:39984216ede3fc9884a58f",
+        "android_client_info": {
+          "package_name": "com.enrichtv.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503797194398-0o2ek0hh33rjutss2f5qa5nh3a9opdff.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enrichtv.android",
+            "certificate_hash": "da66dc4ff21e4f81fe8d8ed7515921c8e760751b"
+          }
+        },
+        {
+          "client_id": "503797194398-8bp5gp1sfbgiv5msd0sa77mnmg9gouf6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enrichtv.android",
+            "certificate_hash": "0792d5ed4158a267714d9cecbbdae55f76ceb887"
+          }
+        },
+        {
+          "client_id": "503797194398-n7o8dqp8jp9ieu3epbnfo460qg4s5qne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enrichtv.android",
+            "certificate_hash": "8eda0baf7ab970610df1c09bbe8ae4122e430959"
+          }
+        },
+        {
+          "client_id": "503797194398-p2e27ai6c2qt86tvq5lerev7iv3qjv6b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enrichtv.android",
+            "certificate_hash": "fb1d1c20f1f5e8c2c34026accfd49a0d6a52a1e9"
+          }
+        },
+        {
+          "client_id": "503797194398-4c57ep5t2t2i6492dogucbm2nhjgq934.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQX0yesP_wcN96lHGUs1cE13CJZeU6OXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503797194398-01d4khv7uhqm036mdah61kgn8792h28s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "503797194398-av4oicl3tsvdf8k2v0tb20714l6k5g8c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobiotics.vlivemooc"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

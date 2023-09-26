@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">EnrichTV</string>
+    <string name="subtitles">SUBTITLE</string>
+    <string name="audio">AUDIO</string>
+    <string name="quality">QUALITY</string>
+    <string name="exo_hd_format">%sp</string>
+    <string name="exo_hd_format_color">&#160;HD</string>
+    <string name="skip_intro" >Skip Intro</string>
+    <string name="next_episode">Next Episode</string>
+    <string name="download_via_error">Disable \'Download over Wi-Fi\' in Settings</string>
+    <string name="admin">ADMIN</string>
+    <string name="kid">KID</string>
+    <string name="kids">KIDS</string>
+    <string name="poster">Poster</string>
+    <string name="pip_support_error">This feature is not supported for this device.</string>
+    <string name="pip_play">play</string>
+    <string name="pip_pause">pause</string>
+    <string name="pip_forward">forward</string>
+    <string name="pip_rewind">rewind</string>
+    <string name="picture_in_picture">Picture in picture</string>
+    <string name="normal">Normal</string>
+    <string name="playbackspeed">Playback Speed</string>
+    <string name="play_list_item_dimension_ratio" translatable="false">H,16:9</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="next_track">Next Track</string>
+    <string name="next_video">Next Video</string>
+    <string name="next_movie" tools:ignore="UnusedResources">Next Movie</string>
+
+    <string name="next_episode_starts_after">Next Episode Starts After %s Seconds</string>
+    <string name="next_movie_starts_after">Next Movie Starts After %s Seconds</string>
+    <string name="next_video_starts_after">Next Video Starts After %s Seconds</string>
+    <string name="next_track_starts_after">Next Track Starts After %s Seconds</string>
+    <string name="series_title" translatable="false">S%s E%s :</string>
+    <string name="default_subtitle_language" translatable="false">en</string>
+
+    <!---Facebook login vLiveMooctest2 development-->
+    <string name="fb_login_protocol_scheme">fb903636010901657</string>
+    <string name="related">Related</string>
+    <string name="season">Season</string>
+    <string name="episodes">Episodes</string>
+    <string name="facebook_app_id">249447180931431</string>
+    <string name="facebook_client_token">67ef86fe6a66d6660f066c7e68509f7b</string>
+    <!-- <string name="default_web_client_id">503797194398-4c57ep5t2t2i6492dogucbm2nhjgq934.apps.googleusercontent.com</string> -->
+</resources>

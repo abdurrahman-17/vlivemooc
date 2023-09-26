@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Step 2 -->
+    <!-- All Overridden Colors should go here -->
+    <!-- Should only be used in STYLE OR RUNTIME -->
+    <!-- color listing should be in same sequence in night and default -->
+    <color name="transparent">@android:color/transparent</color>
+    <color name="exo_buffered_color">@color/c_white_5</color>
+    <color name="exo_played">@color/c_orange_2</color>
+    <color name="exo_scrubber">@color/c_orange_2</color>
+    <color name="exo_buffer_un_played">@color/c_light_gray_1</color>
+
+    <!--Override from firework sdk-->
+    <color name="fire_work_progress">@color/c_p_accent_1</color>
+    <color name="progress_bar_color">@color/white</color>
+</resources>

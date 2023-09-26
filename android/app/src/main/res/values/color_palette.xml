@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Step 2 -->
+    <!-- All Theme Colors should go here -->
+    <!-- Should only be used in STYLE OR RUNTIME -->
+    <!-- color listing should be in same sequence in night and default -->
+    <!-- c_p_name_1 denotes color_palette file -->
+
+
+    <color name="c_p_accent_1">@color/c_black_1</color>
+    <color name="c_p_primary_1">@color/c_white_1</color>
+
+    <!-- text color-->
+    <color name="c_p_text_header_1">@color/c_light_gray_4</color>
+    <color name="c_p_text_header_2">@color/c_white_1</color>
+    <color name="c_p_text_regular_1">@color/c_light_gray_1</color>
+    <color name="c_p_plan_recommended_text_1">@color/c_white_1</color>
+    <color name="c_p_link_1">@color/c_flamingo_1</color>
+    <color name="c_p_exo_position_text_1">@color/c_white_3</color>
+    <color name="c_p_live_text_1">@color/c_white_1</color>
+    <color name="c_p_tab_text_selected_1">@color/white</color>
+    <color name="c_p_new_text_1">@color/white</color>
+
+
+    <!-- text background -->
+    <color name="c_p_sticky_header_1">@color/c_white_8</color>
+    <color name="c_p_no_internet_1">@color/c_red_2</color>
+    <color name="c_p_back_online_1">@color/c_green_3</color>
+    <color name="c_p_live_text_background_1">@color/c_pink_1</color>
+
+    <!-- button background -->
+    <color name="c_p_plan_button_stock">@color/c_gray_3</color>
+
+    <!-- window color -->
+    <color name="c_p_window_background_1">@color/c_white_1</color>
+    <color name="c_p_window_background_dark_1">@color/c_white_2</color>
+    <color name="c_p_bottom_sheet_bg_1">@color/c_white_1</color>
+    <color name="c_p_fragment_bg_1">@color/c_gray_10</color>
+    <color name="c_p_detail_sceen_bg_2">@color/c_gray_10</color>
+
+    <!-- radio button color -->
+    <color name="c_p_radio_button_selected_1">@color/c_flamingo_1</color>
+
+    <!-- edit text color -->
+    <color name="c_p_edit_text_default_background_1">@color/c_light_gray_5</color>
+    <color name="c_p_edit_text_focused_background_1">@color/c_white_1</color>
+    <color name="c_p_edit_text_item_default_line_color_1">@color/c_white_1</color>
+    <color name="c_p_edit_text_item_selected_line_color_1">@color/c_black_1</color>
+    <color name="c_p_radio_focused_background_1">@color/c_jazz_berry_4</color>
+
+    <!-- card color -->
+    <color name="c_p_card_active_1">@color/c_gray_7</color>
+    <color name="c_p_card_in_active_1">@color/c_gray_8</color>
+    <color name="c_p_card_view_stroke_1">@color/c_gray_11</color>
+    <color name="c_p_card_view_default_1">@color/c_white_1</color>
+    <color name="c_p_settings_plan_card_item_bg_1">@color/c_white_1</color>
+    <color name="c_p_ticket_card_background_1">@color/c_white_1</color>
+    <color name="c_p_card_view_border_1">@color/c_gray_11</color>
+
+    <!-- tag text and background -->
+    <color name="c_p_tag_background_1">@color/c_white_8</color>
+    <color name="c_p_trailer_tag_bg_1">@color/c_ebony_2</color>
+    <color name="c_p_hd_bg_1">@color/c_yellow_1</color>
+    <color name="c_p_new_tag_1">@color/c_blue_1</color>
+    <color name="c_p_text_link_1">@color/c_flamingo_1</color>
+    <color name="c_p_hd_1">@color/c_black_9</color>
+    <color name="c_p_recommended_1">@color/c_blue_2</color>
+
+    <color name="c_p_facebook_bg_1">@color/c_blue_6</color>
+    <color name="c_p_google_icon_blue_1">@color/c_blue_4</color>
+    <color name="c_p_google_icon_yellow_1">@color/c_yellow_3</color>
+    <color name="c_p_google_icon_red_1">@color/c_red_4</color>
+
+
+    <!-- gradient color -->
+    <color name="c_p_banner_gradient_bottom_1">@color/c_white_1</color>
+    <color name="c_p_banner_gradient_start_1">@color/c_black_6</color>
+    <color name="c_p_banner_gradient_end_1">@color/c_gray_3</color>
+    <color name="c_p_gradient_circle_start_1">@color/c_ruby_1</color>
+    <color name="c_p_gradient_circle_end_1">@color/c_orange_1</color>
+    <color name="c_p_gradient_button_start_1">@color/c_ruby_1</color>
+    <color name="c_p_gradient_button_end_1">@color/c_orange_1</color>
+    <color name="c_p_gradient_button_end_2">@color/c_orange_2</color>
+
+    <!-- divider -->
+    <color name="c_p_view_divider_bg_1">@color/c_ebony_1</color>
+
+    <!-- progress -->
+    <color name="c_p_content_progress_1">@color/c_orange_2</color>
+    <color name="c_p_download_progress_circle_1">@color/c_white_7</color>
+    <color name="c_p_progress_horizontal_1">@color/c_light_gray_5</color>
+
+    <!-- adapter -->
+    <color name="c_p_adapter_item_checked_1">@color/c_black_7</color>
+    <color name="c_p_poster_overlay_1">@color/c_black_2</color>
+    <color name="c_p_adapter_item_un_checked_bg_1">@color/c_gray_14</color>
+    <color name="c_p_adapter_item_checked_bg_1">@color/c_white_12</color>
+
+    <!-- toolbar -->
+    <color name="c_p_toolbar_text_1">@color/c_light_gray_3</color>
+
+    <!-- category -->
+    <color name="c_p_category_default_1">@color/c_gray_1</color>
+    <color name="c_p_category_active_1">@color/c_gray_5</color>
+    <color name="c_p_category_stroke_1">@color/c_shark_1</color>
+    <color name="c_p_category_text_default_1">@color/c_light_gray_1</color>
+    <color name="c_p_category_text_active_1">@color/c_white_1</color>
+
+
+    <!--Icon Colors. Use this color for Icon text also-->
+    <color name="c_p_icon_normal_1">@color/c_light_gray_1</color>
+    <color name="c_p_icon_active_1">@color/c_black_1</color>
+    <color name="c_p_icon_active_variant_green_1">@color/c_green_1</color>
+    <color name="c_p_icon_tint_1">@color/c_black_1</color>
+    <color name="c_p_icon_1">@color/c_white_5</color>
+    <color name="c_p_icon_secondary_1">@color/c_white_5</color>
+    <color name="c_p_tag_show_1">@color/c_gray_12</color>
+
+
+    <!-- un categorized -->
+    <color name="c_p_white_1">@color/c_white_1</color>
+    <color name="c_p_black_1">@color/c_black_1</color>
+    <color name="c_p_dim_1">@color/c_gray_2</color>
+    <color name="c_p_green_1">@color/c_green_2</color>
+    <color name="c_p_tab_Indicator_1">@color/c_p_link_1</color>
+    <color name="c_p_white_with_alpha_1">@color/c_white_11</color>
+
+    <!--View pager Indicator-->
+    <color name="c_p_default_circle_indicator_fill_1">@color/c_white_1</color>
+    <color name="c_p_default_circle_indicator_page_1">@color/c_black_6</color>
+    <color name="c_p_default_circle_indicator_stroke_1">@color/c_white_10</color>
+    <color name="c_p_spi_dot_1">@color/c_light_gray_6</color>
+    <color name="c_p_spi_dot_Selected_1">@color/c_white_1</color>
+
+    <!-- player background-->
+    <color name="c_p_mob_play_list_bg_1">@color/c_black_3</color>
+    <color name="c_p_mob_player_controller_bg_1">@color/c_black_4</color>
+    <color name="c_p_track_selection_dialog_background_1">@color/c_gray_4</color>
+    <color name="c_p_music_track_active">#1AFFFFFF</color>
+    <color name="c_p_music_track_active_border">#424242</color>
+
+    <!--Menu-->
+    <color name="c_p_menu_bg">@color/c_black_10</color>-->
+    <color name="c_p_namma_flix_splash">@color/c_black_10</color>
+    <color name="c_p_dialog_overlay">@color/c_white_14</color>
+
+    <!-- Navigation -->
+    <color name="c_p_nav_selected">@color/c_white_5</color>
+    <color name="c_p_nav_un_selected">@color/c_light_gray_1</color>
+</resources>

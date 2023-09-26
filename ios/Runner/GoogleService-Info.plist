@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>503797194398-av4oicl3tsvdf8k2v0tb20714l6k5g8c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.503797194398-av4oicl3tsvdf8k2v0tb20714l6k5g8c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAezcZUaesFp7bh3vAJYknzUWv4NyHmOQM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>503797194398</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mobiotics.vlivemooc</string>
+	<key>PROJECT_ID</key>
+	<string>enrichtv-b0346</string>
+	<key>STORAGE_BUCKET</key>
+	<string>enrichtv-b0346.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:503797194398:ios:f1899d421c7055e684a58f</string>
+	<key>DATABASE_URL</key>
+	<string>https://enrichtv-b0346-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

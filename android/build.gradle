@@ -1,0 +1,51 @@
+buildscript {
+    ext.kotlin_version = '1.8.10'
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+         classpath 'com.google.gms:google-services:4.3.5'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven {
+    url = uri("https://bitbucket.org/mobiotics/androiddependencycoreimpl/raw/master/")
+   /* credentials {
+        username = System.getenv("BITBUCKET_USERNAME")
+        password = System.getenv("BITBUCKET_PASSWORD")
+    }*/
+    /*authentication {
+        this.create("basic", BasicAuthentication::class.java)
+    }*/
+}
+maven {
+    url "https://cardinalcommerce.bintray.com/android"
+    credentials {
+        username 'braintree-team-sdk@cardinalcommerce'
+        password '220cc9476025679c4e5c843666c27d97cfb0f951'
+    }
+}
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

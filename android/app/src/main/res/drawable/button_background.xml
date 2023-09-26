@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/c_p_radio_button_selected_1">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/c_p_radio_button_selected_1" />
+            <corners android:radius="@dimen/size_2dp" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:endColor="@color/c_p_gradient_button_end_1"
+                android:startColor="@color/c_p_gradient_button_start_1" />
+            <corners android:radius="@dimen/size_3dp" />
+        </shape>
+    </item>
+</ripple>

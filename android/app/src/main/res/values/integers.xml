@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <integer name="play_skip_increment">10</integer>
+    <integer name="name_max_length">45</integer>
+    <integer name="title_max_length">64</integer>
+    <integer name="description_length">256</integer>
+    <integer name="password_max_length">16</integer>
+    <integer name="password_min_length">6</integer>
+    <integer name="email_max_length">64</integer>
+    <integer name="single_line">1</integer>
+    <integer name="description_max_line">3</integer>
+    <integer name="adapter_description_max_line">2</integer>
+    <integer name="ticket_list_max_line">2</integer>
+    <integer name="auto_play_max_duration">10</integer>
+    <integer name="horizontal_progress_max">100</integer>
+    <integer name="horizontal_progress_min">100</integer>
+    <integer name="horizontal_progress_default">0</integer>
+    <integer name="spi_visible_dot_count">5</integer>
+    <integer name="spi_visible_dot_threshold">2</integer>
+    <integer name="card_length" tools:ignore="UnusedResources">16</integer>
+    <integer name="card_cvv" tools:ignore="UnusedResources">3</integer>
+    <integer name="month_validation" tools:ignore="UnusedResources">2</integer>
+    <integer name="year_validation" tools:ignore="UnusedResources">2</integer>
+    <integer name="secondary_progress" tools:ignore="UnusedResources">0</integer>
+    <integer name="negative_progress_bar_rotation" tools:ignore="UnusedResources">-90</integer>
+    <integer name="rewind_increment">10000</integer>
+    <integer name="fast_forward_increment">10000</integer>
+    <integer name="show_timeout" tools:ignore="UnusedResources">5000</integer>
+    <integer name="item_decorator_margin_left">30</integer>
+    <integer name="item_decorator_margin_right" tools:ignore="UnusedResources">30</integer>
+    <integer name="ribbon_text_rotation">-50</integer>
+    <integer name="drop_down_arrow_rotation">-90</integer>
+    <integer name="fingerprint_alpha">10</integer>
+    <integer name="coupon_max_length">15</integer>
+</resources>

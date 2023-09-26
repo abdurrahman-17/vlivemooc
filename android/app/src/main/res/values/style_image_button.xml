@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@null</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">48dp</item>
+    </style>
+
+    <style name="ImageButton.Navigation">
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="ImageButton.Navigation.Back">
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/ic_arrow_left</item>
+    </style>
+
+    <style name="ImageButton.Navigation.Play">
+    <item name="android:scaleType">center</item>
+    <item name="android:src">@drawable/ic_play</item>
+    </style>
+
+    <style name="ImageButton.Navigation.Pause">
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/ic_pause</item>
+    </style>
+
+    <style name="ImageButton.Navigation.Rewind">
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/ic_rewind</item>
+    </style>
+
+</resources>

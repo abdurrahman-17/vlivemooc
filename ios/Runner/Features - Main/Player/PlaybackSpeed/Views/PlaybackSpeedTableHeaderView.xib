@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlaybackSpeedTableHeaderView" customModule="NET5" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="534" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOA-9g-2VQ">
+                    <rect key="frame" x="0.0" y="0.0" width="534" height="66"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYBACK SPEED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7m-J4-lre">
+                            <rect key="frame" x="0.0" y="0.0" width="534" height="66"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="b7m-J4-lre" secondAttribute="trailing" id="DsL-iV-Ina"/>
+                        <constraint firstItem="b7m-J4-lre" firstAttribute="top" secondItem="fOA-9g-2VQ" secondAttribute="top" id="MHS-jU-lug"/>
+                        <constraint firstAttribute="bottom" secondItem="b7m-J4-lre" secondAttribute="bottom" id="UXh-KI-Mvo"/>
+                        <constraint firstItem="b7m-J4-lre" firstAttribute="leading" secondItem="fOA-9g-2VQ" secondAttribute="leading" id="jeM-FD-dlO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fOA-9g-2VQ" secondAttribute="trailing" id="FWb-nA-9i3"/>
+                <constraint firstAttribute="bottom" secondItem="fOA-9g-2VQ" secondAttribute="bottom" constant="0.01" id="JRW-e3-gif"/>
+                <constraint firstItem="fOA-9g-2VQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KAS-Jf-0oH"/>
+                <constraint firstItem="fOA-9g-2VQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="0.01" id="OT1-iV-yi3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerLabel" destination="b7m-J4-lre" id="Q3h-qk-COQ"/>
+            </connections>
+            <point key="canvasLocation" x="37.681159420289859" y="-528.34821428571422"/>
+        </view>
+    </objects>
+</document>

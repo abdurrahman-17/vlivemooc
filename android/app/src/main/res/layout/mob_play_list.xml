@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme.Player.Background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:focusableInTouchMode="true"
+    android:padding="@dimen/layout_padding_20dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@id/play_list_title"
+        style="@style/AppTheme.TextBodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_8dp"
+        android:letterSpacing="0.1"
+        android:lineSpacingMultiplier="2.58"
+        android:maxLines="1"
+        android:shadowColor="@color/c_black_1"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="@string/related"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/play_list_recycler_view"
+        app:layout_constraintStart_toStartOf="@+id/play_list_recycler_view"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@id/play_list_close"
+        android:layout_width="@dimen/layout_size_40dp"
+        style="@style/AppTheme.Borderless"
+        android:layout_height="@dimen/layout_size_40dp"
+        android:contentDescription="@string/app_name"
+        android:minWidth="@dimen/layout_size_40dp"
+        android:minHeight="@dimen/layout_size_40dp"
+        android:src="@drawable/ic_dialog_close"
+        app:layout_constraintBottom_toTopOf="@id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/play_list_recycler_view"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_height="200dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_season"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/play_list_title"
+        app:layout_constraintEnd_toStartOf="@id/guideline75"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/play_list_recycler_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/item_play_list_season" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline75"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/season_title"
+        style="@style/AppTheme.TextBodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_10dp"
+        android:ellipsize="end"
+        android:letterSpacing="0.1"
+        android:lineSpacingMultiplier="2.58"
+        android:maxLines="1"
+        android:shadowColor="@color/c_black_1"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="@string/season"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_12sp"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view_season"
+        app:layout_constraintEnd_toStartOf="@id/guideline75"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/recycler_view_season" />
+
+    <TextView
+        android:id="@+id/text_season_name"
+        style="@style/AppTheme.TextBodyBold"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.50"
+        android:shadowColor="@color/c_black_1"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_24sp"
+        app:layout_constraintBottom_toTopOf="@id/season_title"
+        app:layout_constraintEnd_toStartOf="@id/guideline75"
+        app:layout_constraintStart_toStartOf="@+id/play_list_recycler_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997"
+        tools:text="Season" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/season_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="text_season_name,season_title,recycler_view_season"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_tags="play_list_title,text_season_name"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

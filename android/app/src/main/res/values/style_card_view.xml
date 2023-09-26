@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.CardView">
+        <item name="cardBackgroundColor">@color/c_p_primary_1</item>
+    </style>
+
+    <style name="AppTheme.CardView5dp">
+        <item name="cardCornerRadius">@dimen/card_corner_radius_5dp</item>
+        <item name="cardElevation">@dimen/size_0dp</item>
+        <item name="cardMaxElevation">@dimen/size_0dp</item>
+    </style>
+    <style name="AppTheme.CardView29dp">
+        <item name="cardCornerRadius">@dimen/size_29dp</item>
+        <item name="cardElevation">@dimen/size_0dp</item>
+        <item name="cardMaxElevation">@dimen/size_0dp</item>
+    </style>
+
+    <style name="AppTheme.CardView.CardActiveColor">
+        <item name="cardBackgroundColor">@color/c_p_card_active_1</item>
+    </style>
+
+    <style name="AppTheme.CardView.CardActiveColor.2dp">
+        <item name="cardCornerRadius">@dimen/card_corner_radius_2dp</item>
+    </style>
+
+    <style name="AppTheme.CardView.WindowBgDark">
+        <item name="cardBackgroundColor">@color/c_p_window_background_dark_1</item>
+    </style>
+
+    <style name="AppTheme.CardView.WindowBgDark.2dp">
+        <item name="cardCornerRadius">@dimen/card_corner_radius_2dp</item>
+    </style>
+
+    <style name="AppTheme.CardView.WindowBg">
+        <item name="cardBackgroundColor">@color/c_p_window_background_1</item>
+    </style>
+
+    <style name="AppTheme.CardView.WindowBg.10dp">
+        <item name="cardCornerRadius">@dimen/card_corner_radius_10dp</item>
+    </style>
+
+    <style name="AppTheme.CardView.CardViewDefault">
+        <item name="cardBackgroundColor">@color/c_p_card_view_default_1</item>
+    </style>
+
+    <style name="AppTheme.CardView.Transparent">
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.CardView.Transparent.10dp">
+        <item name="cardCornerRadius">@dimen/card_corner_radius_10dp</item>
+        <item name="android:background">@drawable/card_view_rounded_border</item>
+    </style>
+
+    <style name="AppTheme.CardView.Transparent.5dp">
+        <item name="cardCornerRadius">@dimen/card_corner_radius_5dp</item>
+        <item name="cardElevation">@dimen/size_0dp</item>
+    </style>
+
+    <style name="AppTheme.CardView.Active">
+        <item name="cardBackgroundColor">@color/c_p_ticket_card_background_1</item>
+    </style>
+
+    <style name="AppTheme.CardView.Active.PairDevice">
+        <item name="android:layout_width">@dimen/size_0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/size_10dp</item>
+        <item name="android:layout_marginBottom">@dimen/size_10dp</item>
+        <item name="android:layout_marginStart">@dimen/size_10dp</item>
+        <item name="android:layout_marginEnd">@dimen/size_10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="cardCornerRadius">@dimen/size_2dp</item>
+        <item name="cardElevation">@dimen/size_1dp</item>
+        <item name="cardMaxElevation">@dimen/size_1dp</item>
+        <item name="cardBackgroundColor">@color/c_p_ticket_card_background_1</item>
+    </style>
+
+    <style name="AppTheme.CardView.PlanItemStyle">
+        <item name="cardBackgroundColor">@color/c_p_settings_plan_card_item_bg_1</item>
+    </style>
+
+    <style name="AppTheme.CardViewPlanStyle">
+        <item name="android:background">@drawable/card_view_rounded_bg</item>
+    </style>
+
+    <style name="AppTheme.CardViewPlanStyle.Border">
+        <item name="android:background">@drawable/card_view_rounded_border</item>
+    </style>
+
+    <style name="FireWorkImageStyle">
+        <item name="android:radius">@dimen/size_5dp</item>
+    </style>
+    <style name="AppTheme.CardView.Transparent.Download">
+        <item name="cardCornerRadius">@dimen/size_5dp</item>
+        <item name="android:layout_width">@dimen/size_0dp</item>
+        <item name="android:layout_height">@dimen/size_0dp</item>
+        <item name="android:layout_margin">@dimen/download_item_margin</item>
+        <item name="cardElevation">@dimen/size_0dp</item>
+    </style>
+</resources>

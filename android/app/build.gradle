@@ -1,0 +1,151 @@
+def localProperties = new Properties()
+
+def keystoreProperiesFile = rootProject.file("key.properties")
+def keystoreProperies = new Properties()
+keystoreProperies.load(new FileInputStream(keystoreProperiesFile))
+
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+ apply plugin: 'com.google.gms.google-services'
+
+
+android {
+    namespace "com.enrichtv.android"
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+
+    defaultConfig {
+        applicationId "com.enrichtv.android"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        minSdkVersion 21
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+        buildConfigField 'String', 'CHROME_CAST_ID', ENRICH_TV_CHROME_CAST_APP_ID
+        buildConfigField 'String', 'PROVIDER_ID', ENRICH_TV_PROVIDER_ID
+
+
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+    signingConfigs {
+        release {
+            keyAlias keystoreProperies["keyAlias"]
+            keyPassword keystoreProperies["keyPassword"]
+            storeFile file('releasekeystore.jks')
+            storePassword keystoreProperies["storePassword"]
+        }
+    }
+    buildTypes {
+        release {
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.release
+        }
+    }
+
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation 'org.mobiotics.player:exo:0.0.3-beta16'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    def lifecycle_version = "2.3.1"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'org.mobiotics:util:1.1.1'
+    api 'org.mobiotics:api:1.1.0'
+
+    // Chrome cast
+    implementation "androidx.mediarouter:mediarouter:1.4.0"
+    api 'com.google.android.gms:play-services-cast-framework:21.3.0'
+
+
+
+
+    // Glide
+    def glideVersion = '4.15.1'
+    //noinspection GradleDependency
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+    implementation("com.github.bumptech.glide:okhttp3-integration:$glideVersion") {
+        exclude group: 'glide-parent'
+    }
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+
+
+    //Google signin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+    implementation 'com.google.firebase:firebase-analytics'
+
+
+    //Facebook login
+//    implementation 'com.facebook.android:facebook-login:latest.release'
+//    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+    implementation 'com.facebook.android:facebook-android-sdk:15.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+
+
+}

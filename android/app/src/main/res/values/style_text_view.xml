@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.TextHeader1">
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:textColor">@color/c_p_text_header_1</item>
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1.16sp">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1.18sp">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader2">
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:textColor">@color/c_p_text_header_2</item>
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader2.14sp">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader2.16sp">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader2.12sp">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader2.11sp">
+        <item name="android:textSize">@dimen/text_size_11sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader2.22sp">
+        <item name="android:textSize">@dimen/text_size_22sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1Medium" parent="AppTheme.TextHeader1">
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="android:textColor">@color/c_p_text_header_1</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1Medium.12sp">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1Medium.18sp">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1Medium.24sp">
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+    </style>
+
+
+
+
+    <style name="AppTheme.TextHeader1Medium.14sp">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1Medium.16sp">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+
+    <style name="AppTheme.TextHeader2Medium16sp">
+        <item name="android:layout_width">@dimen/size_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@color/c_p_text_header_2</item>
+        <item name="android:fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="AppTheme.TextHeader2Medium16sp.SingleLine">
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="AppTheme.TextInput">
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="android:textColor">@color/c_p_text_header_1</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyBold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:textColor">@color/c_p_text_regular_1</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyBold.8sp">
+        <item name="android:textSize">@dimen/text_size_8sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyBold.Black">
+        <item name="android:textColor">@color/c_p_black_1</item>
+    </style>
+
+    <style name="AppTheme.TextBodyBold.PlayerText">
+        <item name="android:textColor">@color/c_p_exo_position_text_1</item>
+    </style>
+
+
+    <style name="AppTheme.TextBodyMedium">
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="android:textColor">@color/c_p_text_regular_1</item>
+        <item name="android:textSize">@dimen/font_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyMediumHeader2">
+        <item name="android:textColor">@color/c_p_text_header_2</item>
+    </style>
+
+    <style name="AppTheme.TextBodyMedium.Header1">
+        <item name="android:textColor">@color/c_p_text_header_1</item>
+    </style>
+
+    <style name="AppTheme.TextBodyMedium.10Sp">
+        <item name="android:textSize">@dimen/font_10sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyMedium.PlanType14Sp">
+        <item name="android:textSize">@dimen/font_14sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyMedium.PlanType16Sp">
+        <item name="android:textSize">@dimen/font_16sp</item>
+        <item name="fontFamily">@font/font_medium</item>
+    </style>
+
+
+
+    <style name="AppTheme.TextBodyRegular">
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="android:textColor">@color/c_p_text_regular_1</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyRegularTxt">
+        <item name="android:fontFamily">@font/font_semibold</item>
+        <item name="android:textColor">@color/c_p_text_regular_1</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+
+    </style>
+
+    <style name="AppTheme.TextBodySemiBold">
+        <item name="android:fontFamily">@font/font_semibold</item>
+        <item name="android:textColor">@color/c_p_text_regular_1</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyRegular.10Sp">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+
+    <style name="AppTheme.TextBodyRegularHeader1" parent="AppTheme.TextBodyRegular">
+        <item name="android:textColor">@color/c_p_text_header_1</item>
+    </style>
+
+    <style name="AppTheme.TextBodyRegularHeader2" parent="AppTheme.TextBodyRegular">
+        <item name="android:textColor">@color/c_p_text_header_2</item>
+        <item name="fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="AppTheme.TextBodyRegularHeader2.SettingHeader">
+        <item name="android:layout_width">@dimen/size_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/layout_padding_15dp</item>
+        <item name="android:paddingBottom">@dimen/layout_padding_15dp</item>
+        <item name="android:paddingEnd">@dimen/layout_padding_10dp</item>
+        <item name="android:paddingStart">@dimen/layout_padding_20dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/c_p_sticky_header_1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginTop">@dimen/layout_margin_15dp</item>
+        <item name="android:tag">sticky</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:fontFamily">@font/font_bold</item>
+    </style>
+
+
+
+    <style name="AppTheme.TextBodyBoldHeader1">
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:textColor">@color/c_p_text_header_1</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="AppTheme.TextMenu">
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:textColor">@color/c_p_text_header_2</item>
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+
+    <style name="AppTheme.TextMenu.14sp">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.TextMenu.22sp">
+        <item name="android:textSize">@dimen/font_22sp</item>
+    </style>
+
+    <style name="AppTheme.TextMenuMedium" parent="AppTheme.TextMenu">
+        <item name="android:fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="AppTheme.TextSubMenuBold" parent="AppTheme.TextMenu">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.TextSubMenuMedium" parent="AppTheme.TextSubMenuBold">
+        <item name="android:fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="AppTheme.TextSubMenuRegular" parent="AppTheme.TextSubMenuBold">
+        <item name="android:fontFamily">@font/font_regular</item>
+    </style>
+
+    <style name="AppTheme.TextMediumRegular" parent="AppTheme.TextMedium">
+        <item name="android:textColor">@color/c_p_text_regular_1</item>
+    </style>
+
+    <style name="AppTheme.TextLink">
+        <item name="android:textColor">@color/c_p_text_link_1</item>
+        <item name="android:textSize">@dimen/font_12sp</item>
+    </style>
+
+    <!-- <style name="AppTheme.TextLink.Regular">
+         <item name="android:fontFamily">@font/font_regular</item>
+     </style>-->
+
+    <!--<style name="AppTheme.TextLink.Bold">
+        <item name="android:fontFamily">@font/font_bold</item>
+    </style>-->
+
+    <style name="AppTheme.TextLink.Medium">
+        <item name="android:fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="AppTheme.TextLink.Medium.10sp">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+
+
+
+    <style name="AppTheme.ToolbarSearchTextTitle">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:textColor">@color/c_p_toolbar_text_1</item>
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.TextBodyMedium.Plan14Sp">
+        <item name="android:textSize">@dimen/font_14sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+
+    <style name="AppTheme.TextHeader1.Plan32Sp">
+        <item name="android:textSize">@dimen/font_32sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1.Plan22Sp">
+        <item name="android:textSize">@dimen/font_22sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="AppTheme.TextHeader1.Plan18Sp">
+        <item name="android:textSize">@dimen/font_18sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="AppTheme.TextMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+        <item name="android:textColor">@color/c_p_text_header_2</item>
+        <item name="android:fontFamily">@font/font_medium</item>
+    </style>
+
+    <style name="AppTheme.TextMedium.14Sp">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.TextMedium.16Sp">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="AppTheme.TextMedium.Tag">
+        <item name="android:background">@color/c_p_tag_background_1</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <!--<style name="AppTheme.TextMedium.KidTag">
+        <item name="android:background">@color/c_p_white_1</item>
+        <item name="android:textColor">@color/c_p_black_1</item>
+    </style>-->
+
+
+    <style name="AppTheme.TextMediumRegular.Faq">
+        <item name="android:background">@color/c_p_window_background_dark_1</item>
+    </style>
+
+
+    <style name="AppTheme.AdapterItemTextSecondary">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/font_10sp</item>
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/c_p_text_regular_1</item>
+    </style>
+
+    <style name="AppTheme.AdapterItemTextSecondary.Bold" tools:ignore="UnusedResources">
+        <item name="android:fontFamily">@font/font_bold</item>
+    </style>
+
+
+
+    <style name="AppTheme.TextHeader2.Medium18sp">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+
+    <style name="AppTheme.TextBodyBold.Plan14sp" tools:ignore="UnusedResources">
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:textColor">@color/c_p_text_header_1</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+
+</resources>

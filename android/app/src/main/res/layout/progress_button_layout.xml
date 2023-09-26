@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="locale"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/button_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/progress_bar_states" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_button"
+            style="@style/AppTheme.TextBodyRegular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/layout_margin_2_5dp"
+            android:gravity="center_vertical"
+            android:layoutDirection="locale"
+            android:textStyle="bold"
+            android:padding="@dimen/layout_margin_5dp"
+            android:paddingStart="@dimen/layout_padding_5dp"
+            android:paddingEnd="@dimen/layout_padding_5dp"
+            android:text="@string/next_episode"
+            android:textDirection="locale"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancelNextEpisode"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_30dp"
+        android:layout_marginStart="@dimen/layout_margin_2_5dp"
+        android:background="@color/c_gray_15"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12sp" />
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+    <style name="LaunchTheme" parent="@style/AppTheme">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <!--Dialog fragment for Track Selection-->
+    <style name="TrackSelectionDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+        <item name="android:windowBackground">@color/c_p_track_selection_dialog_background_1</item>
+    </style>
+    <style name="AppTheme.Widget"/>
+    <style name="AppTheme.Widget.ImageView"/>
+    <style name="AppTheme.Widget.ImageView.CenterCrop">
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="AppTheme.Widget.ImageView.CenterCrop.DialogClose">
+        <item name="android:layout_margin">@dimen/dialog_box_close_margin</item>
+        <item name="android:padding">@dimen/dialog_box_close_padding</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:src">@drawable/ic_dialog_close</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="AppTheme.Borderless">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="AppTheme.Borderless.Close">
+        <item name="android:tint">@color/c_p_white_1</item>
+    </style>
+    <style name="AppTheme.Borderless.Play">
+        <item name="android:tint">@color/c_p_white_1</item>
+        <item name="android:src">@drawable/ic_play_two</item>
+    </style>
+    <style name="AppTheme.Borderless.Play.White">
+        <item name="android:tint">@color/c_p_white_1</item>
+        <item name="android:src">@drawable/ic_play_secondary</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="AppTheme.Player"/>
+    <style name="AppTheme.Player.Background">
+        <item name="android:background">@color/c_p_mob_play_list_bg_1</item>
+    </style>
+    <style name="ExoMediaButtonRewind">
+        <item name="android:src">@drawable/ic_bkwd</item>
+        <item name="drawableTint">@color/c_white_5</item>
+        <item name="android:contentDescription">@string/exo_controls_rewind_description</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="AppTheme.Player.Progress">
+        <item name="android:layout_width">@dimen/size_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginStart">@dimen/size_3dp</item>
+        <item name="android:layout_marginEnd">@dimen/size_3dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="fontFamily">@font/font_medium</item>
+        <item name="ad_marker_width">@dimen/size_5dp</item>
+        <item name="bar_height">@dimen/layout_size_1dp</item>
+        <item name="buffered_color">@color/exo_buffered_color</item>
+        <item name="played_color">@color/exo_played</item>
+        <item name="scrubber_color">@color/exo_scrubber</item>
+        <item name="scrubber_disabled_size">@dimen/size_0dp</item>
+        <item name="scrubber_dragged_size">@dimen/size_15dp</item>
+        <item name="scrubber_enabled_size">@dimen/size_10dp</item>
+        <item name="unplayed_color">@color/exo_buffer_un_played</item>
+    </style>
+    <style name="AppTheme.PlayerControllerStyle">
+        <item name="android:background">@color/c_p_mob_player_controller_bg_1</item>
+    </style>
+    <style name="ExoMediaButtonPlay">
+        <item name="android:src">@drawable/ic_play_secondary</item>
+        <item name="android:contentDescription">@string/exo_controls_play_description</item>
+        <item name="drawableTint">@color/c_p_white_1</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="ExoMediaButtonPause">
+        <item name="android:src">@drawable/ic_pause</item>
+        <item name="drawableTint">@color/c_p_white_1</item>
+        <item name="android:contentDescription">@string/exo_controls_pause_description</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+    <style name="ExoMediaButtonFastForward">
+        <item name="android:src">@drawable/ic_fastforward</item>
+        <item name="android:contentDescription">@string/exo_controls_fastforward_description</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:animateOnClick">true</item>
+        <item name="drawableTint">@color/c_white_5</item>
+        <item name="android:rotationAnimation" tools:targetApi="o">jumpcut</item>
+    </style>
+    <style name="AppTheme.TextTag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_8sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginStart">@dimen/size_2dp</item>
+        <item name="android:layout_marginEnd">@dimen/size_2dp</item>
+        <item name="android:layout_marginTop">@dimen/size_1dp</item>
+        <item name="android:layout_marginBottom">@dimen/size_2dp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:paddingTop">@dimen/size_2dp</item>
+        <item name="android:paddingStart">@dimen/size_5dp</item>
+        <item name="android:paddingEnd">@dimen/size_5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">@dimen/size_2dp</item>
+        <item name="android:background">@drawable/tag_new_bg</item>
+        <item name="android:fontFamily">@font/font_bold</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="TextTagLive" parent="AppTheme.TextTag">
+        <item name="android:backgroundTint">@color/c_p_live_text_background_1</item>
+        <item name="android:textColor">@color/c_p_live_text_1</item>
+    </style>
+    <style name="AppTheme.DivideVertical">
+        <item name="android:background">@color/c_p_view_divider_bg_1</item>
+        <item name="android:layout_height">@dimen/size_0dp</item>
+        <item name="android:layout_width">@dimen/divider_width_1dp</item>
+    </style>
+    <style name="AppTheme.DivideVertical.Dialog">
+        <item name="android:background">@color/c_p_tag_background_1</item>
+    </style>
+    <style name="AppTheme.PlayerSpeedDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowMinWidthMajor">30%</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowMinWidthMinor">30%</item>
+        <item name="windowFixedHeightMinor">90%</item>
+        <item name="windowFixedHeightMajor">90%</item>
+        <item name="android:fontFamily">@font/font_semibold</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+    <style name="AppTheme.PlayerSpeedDialogTabTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowMinWidthMajor">30%</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowMinWidthMinor">30%</item>
+        <item name="windowFixedHeightMinor">60%</item>
+        <item name="windowFixedHeightMajor">60%</item>
+        <item name="android:fontFamily">@font/font_semibold</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+    <style name="TextTagNew" parent="AppTheme.TextTag">
+        <item name="android:backgroundTint">@color/c_p_new_tag_1</item>
+        <item name="android:textColor">@color/c_p_live_text_1</item>
+    </style>
+</resources>

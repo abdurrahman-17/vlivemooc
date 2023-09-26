@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_35dp"
+    android:layout_gravity="center_horizontal"
+    android:drawableStart="@drawable/track_icon_selector_red"
+    android:drawablePadding="@dimen/layout_margin_8dp"
+    android:fontFamily="@font/font_semibold"
+    android:gravity="center"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:textColor="@drawable/playerspeed_text_color"
+    android:textSize="@dimen/font_16sp" />
